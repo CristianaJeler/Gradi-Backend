@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="15feb2021-create_users" author="cris">
+        <createTable tableName="users">
+            <column name="id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="last_name" type="varchar(50)">
+            </column>
+            <column name="first_name" type="varchar(50)">
+            </column>
+            <column name="email" type="varchar(100)">
+                <constraints unique="true"/>
+            </column>
+            <column name="verified" type="boolean">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="varchar(25)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="varchar(50)">
+                <constraints unique="true"/>
+            </column>
+            <column name="password" type="varchar(250)"/>
+            <column name="token" type="varchar(250)">
+                <constraints unique="true"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="26feb2021-add_fields" author="cri">
+        <addColumn tableName="users">
+            <column type="varchar(20)" name="phone">
+                <constraints unique="true"/>
+            </column>
+            <column type="varchar(100)" name="kindergarten"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="26feb2021-description" author="cri">
+        <addColumn tableName="users">
+            <column type="varchar(500)" name="description"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="26feb2021-profile_picture" author="cri">
+        <addColumn tableName="users">
+            <column type="blob" name="picture"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

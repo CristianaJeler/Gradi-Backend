@@ -47,8 +47,14 @@
         </addColumn>
     </changeSet>
     <changeSet id="26feb2021-profile_picture" author="cri">
-        <addColumn tableName="users">
-            <column type="blob" name="picture"/>
+        <addColumn tableName="users" schemaName="public">
+            <column type="varchar(10000)" name="picture"/>
         </addColumn>
+    </changeSet>
+    <changeSet id="26feb2021-profile_picture_change_type" author="cri">
+        <modifyDataType  columnName="picture"
+                         newDataType="bytea"
+                         schemaName="public"
+                         tableName="users"/>
     </changeSet>
 </databaseChangeLog>

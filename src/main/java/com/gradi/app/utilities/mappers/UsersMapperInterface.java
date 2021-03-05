@@ -1,14 +1,14 @@
 package com.gradi.app.utilities.mappers;
 
+import com.gradi.app.authentication.jwt.LoggedInUserData;
 import com.gradi.app.user.model.UserEntity;
-import com.gradi.app.user.model.UserEntityDTO;
-import com.gradi.app.user.model.UserSignupDTO;
-import org.mapstruct.BeanMapping;
+import com.gradi.app.user.DTOs.UserEntityDTO;
+import com.gradi.app.user.DTOs.UserSignupDTO;
 import org.mapstruct.Mapper;
-import org.springframework.security.core.userdetails.UserDetails;
 
 @Mapper(componentModel = "spring")
 public interface UsersMapperInterface {
     UserEntityDTO mapToUserEntityDTO(UserEntity user);
     UserEntity mapToUserEntity(UserSignupDTO user);
+    LoggedInUserData mapToLoggedInUserData(UserEntity user);
 }

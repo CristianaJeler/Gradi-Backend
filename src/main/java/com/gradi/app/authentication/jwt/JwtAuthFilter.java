@@ -28,15 +28,13 @@ public class JwtAuthFilter extends OncePerRequestFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws ServletException, IOException {
-        System.out.println("FILTEEER");
         try {
             String token;
-            String header = request.getHeader("authorization");
-            if (StringUtils.hasText(header) && header.startsWith("Bearer ")) {
-                token = header.replace(jwtValues.getTOKEN_TYPE(), "");
+            String header = request.getHeader(jwtValues.getHEADER());
+            if (StringUtils.hasText(header) && header.startsWith(jwtValues.getTOKEN_TYPE()+" ")) {
+                token = header.replace(jwtValues.getTOKEN_TYPE()+" ", "");
             } else token = null;
 
-            System.out.println("TOKEN "+token);
 
             if (StringUtils.hasText(token) /* TODO: 20-Feb-21 Token validation */) {
                 String userId = tokenProvider.extractID(token);
@@ -51,6 +49,5 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 //            logger.error("Could not set user authentication in security context", ex);
         }
         chain.doFilter(request, response);
-
     }
 }

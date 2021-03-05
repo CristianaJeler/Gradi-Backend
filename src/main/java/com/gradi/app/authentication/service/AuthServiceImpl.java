@@ -3,11 +3,8 @@ package com.gradi.app.authentication.service;
 import com.gradi.app.authentication.errors.ExistingCredentialsError;
 import com.gradi.app.authentication.errors.InvalidCredentialsError;
 import com.gradi.app.authentication.errors.AuthValidator;
-import com.gradi.app.authentication.errors.LoginError;
-import com.gradi.app.user.model.UserEntity;
-import com.gradi.app.user.model.UserEntityDTO;
-import com.gradi.app.user.model.UserLoginDTO;
-import com.gradi.app.user.model.UserSignupDTO;
+import com.gradi.app.user.DTOs.UserEntityDTO;
+import com.gradi.app.user.DTOs.UserSignupDTO;
 import com.gradi.app.user.repository.UserRepository;
 import com.gradi.app.utilities.mappers.UsersMapperInterface;
 import lombok.AllArgsConstructor;
@@ -26,7 +23,8 @@ public class AuthServiceImpl implements AuthServiceInterface {
     @Autowired
     UsersMapperInterface entityMapper;
 
-    BCryptPasswordEncoder passwordEncoder=new BCryptPasswordEncoder();
+    @Autowired
+    PasswordEncoder passwordEncoder;
 
 
 
@@ -48,7 +46,6 @@ public class AuthServiceImpl implements AuthServiceInterface {
                 throw new ExistingCredentialsError("Existing username!");
         }
 
-        System.out.println(user.toString());
         String encodedPasswd=passwordEncoder.encode(user.getPassword());
         user.setPassword(encodedPasswd);
 
@@ -58,16 +55,6 @@ public class AuthServiceImpl implements AuthServiceInterface {
         userRepository.setToken("token_"+res.getId(), res.getUsername());
 
         return entityMapper.mapToUserEntityDTO(res);
-    }
-
-    @Override
-    public UserEntity login(UserLoginDTO user) {
-//        PasswordEncoder encoder=new BCryptPasswordEncoder();
-//        var encodedPass=encoder.encode(user.getPassword());
-//        var authUser=userRepository.findByUsernameAndPassword(user.getUsername(), encodedPass);
-//        if(authUser!=null) return authUser;
-//        throw new LoginError("Login failed!");
-        return null;
     }
 
 

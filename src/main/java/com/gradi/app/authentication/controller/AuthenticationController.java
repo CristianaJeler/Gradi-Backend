@@ -1,17 +1,18 @@
 package com.gradi.app.authentication.controller;
 
+import com.gradi.app.apiResponse.ApiResponse;
 import com.gradi.app.authentication.errors.ExistingCredentialsError;
 import com.gradi.app.authentication.errors.InvalidCredentialsError;
 import com.gradi.app.authentication.errors.LoginError;
-import com.gradi.app.authentication.jwt.MyToken;
+import com.gradi.app.authentication.jwt.LoggedInUserData;
 import com.gradi.app.authentication.jwt.TokenProvider;
 import com.gradi.app.authentication.service.AuthServiceInterface;
-import com.gradi.app.user.model.UserEntity;
-import com.gradi.app.user.model.UserEntityDTO;
-import com.gradi.app.user.model.UserLoginDTO;
-import com.gradi.app.user.model.UserSignupDTO;
+import com.gradi.app.user.DTOs.UserEntityDTO;
+import com.gradi.app.user.DTOs.UserLoginDTO;
+import com.gradi.app.user.DTOs.UserSignupDTO;
 import com.gradi.app.user.service.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -36,12 +37,10 @@ public class AuthenticationController {
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
     ResponseEntity<?> signup(@RequestBody UserSignupDTO user) {
         try{
-            UserEntityDTO userSignedUp=authService.signup(user);
-            return ResponseEntity.ok(userSignedUp);
-        }catch (InvalidCredentialsError ex){
-            return ResponseEntity.status(422).body(ex.getMessage());
-        }catch(ExistingCredentialsError ex){
-            return ResponseEntity.status(409).body(ex.getMessage());
+            authService.signup(user);
+            return new ResponseEntity(new ApiResponse(null,true),HttpStatus.OK);
+        }catch (InvalidCredentialsError|ExistingCredentialsError ex){
+            return new ResponseEntity(new ApiResponse(ex.getMessage(),false),HttpStatus.OK);
         }
     }
 
@@ -59,12 +58,11 @@ public class AuthenticationController {
 
             String jwt = tokenProvider.generateToken(authentication);
             userService.setToken(jwt, user.getUsername());
-            String userType=userService.getUserTypeFromJWT(jwt);
-            System.out.println(userType);
-            return ResponseEntity.ok(new MyToken(jwt, userType));
+            LoggedInUserData loggedUser=userService.getLoggedInUserFromJWT(jwt);
+            loggedUser.setToken(jwt);
+            return ResponseEntity.ok(loggedUser);
         }catch (LoginError ex) {
-//            return ResponseEntity.status(401).body(ex.getMessage());
-            return ResponseEntity.ok("LOGIN ERROR");
+            return new ResponseEntity(new ApiResponse(ex.getMessage(),false),HttpStatus.OK);
         }
     }
 }

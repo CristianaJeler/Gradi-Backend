@@ -1,12 +1,8 @@
 package com.gradi.app.authentication.jwt;
 
-import com.gradi.app.user.model.UserEntity;
-import com.gradi.app.user.model.UserLoginDTO;
-import com.gradi.app.user.model.UserSignupDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import liquibase.pro.packaged.J;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;

@@ -4,6 +4,7 @@ package com.gradi.app.user.model;
 import lombok.Data;
 import lombok.Generated;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
@@ -34,6 +35,48 @@ public class UserEntity implements Serializable {
     private String password;
     @Column(name = "token")
     private String token;
+    @Column(name="phone")
+    private String phone;
+    @Column(name="kindergarten")
+    private String kindergarten;
+    @Column(name="description")
+    private String description;
+
+    @Type(type="org.hibernate.type.BinaryType")
+    @Column(name="picture")
+    private byte[] picture;
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getKindergarten() {
+        return kindergarten;
+    }
+
+    public void setKindergarten(String kindergarten) {
+        this.kindergarten = kindergarten;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public byte[] getPicture() {
+        return picture;
+    }
+
+    public void setPicture(byte[] picture) {
+        this.picture = picture;
+    }
 
     public String getToken() {
         return token;

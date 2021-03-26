@@ -3,13 +3,12 @@ package com.gradi.app.authentication.service;
 import com.gradi.app.authentication.errors.ExistingCredentialsError;
 import com.gradi.app.authentication.errors.InvalidCredentialsError;
 import com.gradi.app.authentication.errors.AuthValidator;
-import com.gradi.app.user.DTOs.UserEntityDTO;
-import com.gradi.app.user.DTOs.UserSignupDTO;
+import com.gradi.app.user.dtos.UserEntityDTO;
+import com.gradi.app.user.dtos.UserSignupDTO;
 import com.gradi.app.user.repository.UserRepository;
 import com.gradi.app.utilities.mappers.UsersMapperInterface;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 

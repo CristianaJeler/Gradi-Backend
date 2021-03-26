@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="18mar2021-create_user_groups" author="cris">
+        <createTable tableName="users_groups">
+            <column name="user_id" type="varchar(250)">
+               <constraints foreignKeyName="user_id_fk" references="users(user_id)"
+                            nullable="false" primaryKey="true" primaryKeyName="users_groups_PK"/>
+            </column>
+            <column name="group_id" type="varchar(250)">
+                <constraints foreignKeyName="group_id_fk" references="groups(group_id)"
+                             nullable="false" primaryKey="true" primaryKeyName="users_groups_PK"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

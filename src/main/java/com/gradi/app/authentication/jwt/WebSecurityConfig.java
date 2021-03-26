@@ -1,10 +1,8 @@
 package com.gradi.app.authentication.jwt;
 
-import com.gradi.app.authentication.errors.LoginError;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -46,9 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // handle unauthorized attempts
                 .exceptionHandling()
                 .authenticationEntryPoint((req, rsp, e)
-                        -> {
-                    rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED, e.getMessage());
-                })
+                        -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED, e.getMessage()))
                 .and()
                 // Add a filter to validate user credentials and add token in the response header
 

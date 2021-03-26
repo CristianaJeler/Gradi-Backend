@@ -1,8 +1,9 @@
 package com.gradi.app.user.service;
 
 import com.gradi.app.authentication.jwt.LoggedInUserData;
-import com.gradi.app.user.DTOs.PasswordChangeDTO;
-import com.gradi.app.user.DTOs.UserEntityDTO;
+import com.gradi.app.user.dtos.PasswordChangeDTO;
+import com.gradi.app.user.dtos.UserEntityDTO;
+import com.gradi.app.user.model.UserEntity;
 import com.gradi.app.user.repository.UserRepository;
 import com.gradi.app.utilities.mappers.UsersMapperInterface;
 import lombok.AllArgsConstructor;
@@ -48,6 +49,13 @@ public class UserServiceImpl implements UserServiceInterface{
     @Override
     public UserEntityDTO getUserByToken(String token) {
         return usersMapper.mapToUserEntityDTO(userRepository.findUserEntityByToken(token));
+    }
+
+
+    @Override
+    public UserEntity getUserEntityByToken(String token){
+        var res=userRepository.findUserEntityByToken(token);
+        return res;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.gradi.app.user.DTOs;
+package com.gradi.app.user.dtos;
 
 import java.io.Serializable;
 

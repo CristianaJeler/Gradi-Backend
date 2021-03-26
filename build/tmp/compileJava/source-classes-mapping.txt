@@ -1,57 +1,73 @@
-com/gradi/app/authentication/jwt/MyUserDetails.java
- com.gradi.app.authentication.jwt.MyUserDetails
-com/gradi/app/authentication/jwt/LoggedInUserData.java
- com.gradi.app.authentication.jwt.LoggedInUserData
-com/gradi/app/user/DTOs/UserLoginDTO.java
- com.gradi.app.user.DTOs.UserLoginDTO
-com/gradi/app/authentication/service/AuthServiceInterface.java
- com.gradi.app.authentication.service.AuthServiceInterface
-com/gradi/app/authentication/errors/AuthValidator.java
- com.gradi.app.authentication.errors.AuthValidator
-com/gradi/app/authentication/errors/LoginError.java
- com.gradi.app.authentication.errors.LoginError
-com/gradi/app/user/DTOs/UserSignupDTO.java
- com.gradi.app.user.DTOs.UserSignupDTO
-com/gradi/app/authentication/errors/ExistingCredentialsError.java
- com.gradi.app.authentication.errors.ExistingCredentialsError
-com/gradi/app/utilities/mappers/UsersMapperInterface.java
- com.gradi.app.utilities.mappers.UsersMapperInterface
-com/gradi/app/authentication/errors/InvalidCredentialsError.java
- com.gradi.app.authentication.errors.InvalidCredentialsError
-com/gradi/app/MainGradiApp.java
- com.gradi.app.MainGradiApp
-com/gradi/app/user/model/UserEntity.java
- com.gradi.app.user.model.UserEntity
+com/gradi/app/user/dtos/PasswordChangeDTO.java
+ com.gradi.app.user.dtos.PasswordChangeDTO
 com/gradi/app/authentication/service/AuthServiceImpl.java
  com.gradi.app.authentication.service.AuthServiceImpl
  com.gradi.app.authentication.service.AuthServiceImpl$1
+com/gradi/app/utilities/mappers/UserMapperImpl.java
+ com.gradi.app.utilities.mappers.UserMapperImpl
+com/gradi/app/authentication/errors/AuthValidator.java
+ com.gradi.app.authentication.errors.AuthValidator
+com/gradi/app/user/dtos/UserEntityDTO.java
+ com.gradi.app.user.dtos.UserEntityDTO
+com/gradi/app/authentication/errors/LoginError.java
+ com.gradi.app.authentication.errors.LoginError
+com/gradi/app/authentication/service/AuthServiceInterface.java
+ com.gradi.app.authentication.service.AuthServiceInterface
+com/gradi/app/user/service/UserServiceInterface.java
+ com.gradi.app.user.service.UserServiceInterface
+com/gradi/app/user/dtos/UserLoginDTO.java
+ com.gradi.app.user.dtos.UserLoginDTO
+com/gradi/app/user/dtos/ProfilePictureDTO.java
+ com.gradi.app.user.dtos.ProfilePictureDTO
+com/gradi/app/authentication/jwt/LoggedInUserData.java
+ com.gradi.app.authentication.jwt.LoggedInUserData
+com/gradi/app/authentication/jwt/UserDetailServiceImpl.java
+ com.gradi.app.authentication.jwt.UserDetailServiceImpl
+com/gradi/app/MainGradiApp.java
+ com.gradi.app.MainGradiApp
+com/gradi/app/authentication/errors/ExistingCredentialsError.java
+ com.gradi.app.authentication.errors.ExistingCredentialsError
+com/gradi/app/user/dtos/UserSignupDTO.java
+ com.gradi.app.user.dtos.UserSignupDTO
+com/gradi/app/authentication/jwt/WebSecurityConfig.java
+ com.gradi.app.authentication.jwt.WebSecurityConfig
 com/gradi/app/authentication/jwt/JwtValues.java
  com.gradi.app.authentication.jwt.JwtValues
 com/gradi/app/authentication/jwt/TokenProvider.java
  com.gradi.app.authentication.jwt.TokenProvider
-com/gradi/app/user/DTOs/ProfilePictureDTO.java
- com.gradi.app.user.DTOs.ProfilePictureDTO
-com/gradi/app/user/repository/UserRepository.java
- com.gradi.app.user.repository.UserRepository
-com/gradi/app/user/DTOs/UserEntityDTO.java
- com.gradi.app.user.DTOs.UserEntityDTO
-com/gradi/app/utilities/mappers/UserMapperImpl.java
- com.gradi.app.utilities.mappers.UserMapperImpl
-com/gradi/app/apiResponse/ApiResponse.java
- com.gradi.app.apiResponse.ApiResponse
-com/gradi/app/authentication/jwt/WebSecurityConfig.java
- com.gradi.app.authentication.jwt.WebSecurityConfig
-com/gradi/app/user/service/UserServiceInterface.java
- com.gradi.app.user.service.UserServiceInterface
-com/gradi/app/authentication/jwt/UserDetailServiceImpl.java
- com.gradi.app.authentication.jwt.UserDetailServiceImpl
-com/gradi/app/user/controller/UserController.java
- com.gradi.app.user.controller.UserController
-com/gradi/app/user/DTOs/PasswordChangeDTO.java
- com.gradi.app.user.DTOs.PasswordChangeDTO
+com/gradi/app/authentication/errors/InvalidCredentialsError.java
+ com.gradi.app.authentication.errors.InvalidCredentialsError
 com/gradi/app/authentication/jwt/JwtAuthFilter.java
  com.gradi.app.authentication.jwt.JwtAuthFilter
+com/gradi/app/apiResponse/ApiResponse.java
+ com.gradi.app.apiResponse.ApiResponse
+com/gradi/app/authentication/jwt/MyUserDetails.java
+ com.gradi.app.authentication.jwt.MyUserDetails
+com/gradi/app/group/model/GroupEntity.java
+ com.gradi.app.group.model.GroupEntity
+com/gradi/app/user/controller/UserController.java
+ com.gradi.app.user.controller.UserController
+com/gradi/app/user/model/UserEntity.java
+ com.gradi.app.user.model.UserEntity
+com/gradi/app/utilities/mappers/UsersMapperInterface.java
+ com.gradi.app.utilities.mappers.UsersMapperInterface
 com/gradi/app/authentication/controller/AuthenticationController.java
  com.gradi.app.authentication.controller.AuthenticationController
+com/gradi/app/user/repository/UserRepository.java
+ com.gradi.app.user.repository.UserRepository
 com/gradi/app/user/service/UserServiceImpl.java
  com.gradi.app.user.service.UserServiceImpl
+com/gradi/app/group/model/UserGroupEntity.java
+ com.gradi.app.group.model.UserGroupEntity
+com/gradi/app/group/repository/GroupRepository.java
+ com.gradi.app.group.repository.GroupRepository
+com/gradi/app/group/service/GroupServiceInterface.java
+ com.gradi.app.group.service.GroupServiceInterface
+com/gradi/app/group/controller/GroupController.java
+ com.gradi.app.group.controller.GroupController
+com/gradi/app/group/model/UserGroupKey.java
+ com.gradi.app.group.model.UserGroupKey
+com/gradi/app/group/repository/UserGroupRepository.java
+ com.gradi.app.group.repository.UserGroupRepository
+com/gradi/app/group/service/GroupServiceImpl.java
+ com.gradi.app.group.service.GroupServiceImpl

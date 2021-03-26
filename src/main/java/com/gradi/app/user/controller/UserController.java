@@ -2,9 +2,9 @@ package com.gradi.app.user.controller;
 
 import com.gradi.app.apiResponse.ApiResponse;
 import com.gradi.app.authentication.jwt.JwtValues;
-import com.gradi.app.user.DTOs.PasswordChangeDTO;
-import com.gradi.app.user.DTOs.ProfilePictureDTO;
-import com.gradi.app.user.DTOs.UserEntityDTO;
+import com.gradi.app.user.dtos.PasswordChangeDTO;
+import com.gradi.app.user.dtos.ProfilePictureDTO;
+import com.gradi.app.user.dtos.UserEntityDTO;
 import com.gradi.app.user.service.UserServiceInterface;
 import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;

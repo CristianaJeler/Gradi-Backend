@@ -2,8 +2,8 @@ package com.gradi.app.utilities.mappers;
 
 import com.gradi.app.authentication.jwt.LoggedInUserData;
 import com.gradi.app.user.model.UserEntity;
-import com.gradi.app.user.DTOs.UserEntityDTO;
-import com.gradi.app.user.DTOs.UserSignupDTO;
+import com.gradi.app.user.dtos.UserEntityDTO;
+import com.gradi.app.user.dtos.UserSignupDTO;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,14 +1,20 @@
 package com.gradi.app.user.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.gradi.app.group.model.GroupEntity;
+import com.gradi.app.group.model.UserGroupEntity;
 import lombok.Data;
-import lombok.Generated;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "users")
@@ -17,7 +23,7 @@ public class UserEntity implements Serializable {
     @Id
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "uuid2")
-    @Column(name = "id",  columnDefinition = "varchar")
+    @Column(name = "user_id", columnDefinition = "varchar")
     private String id;
     @Column(name = "first_name")
     private String firstName;
@@ -35,16 +41,37 @@ public class UserEntity implements Serializable {
     private String password;
     @Column(name = "token")
     private String token;
-    @Column(name="phone")
+    @Column(name = "phone")
     private String phone;
-    @Column(name="kindergarten")
+    @Column(name = "kindergarten")
     private String kindergarten;
-    @Column(name="description")
+    @Column(name = "description")
     private String description;
 
-    @Type(type="org.hibernate.type.BinaryType")
-    @Column(name="picture")
+    @Type(type = "org.hibernate.type.BinaryType")
+    @Column(name = "picture")
     private byte[] picture;
+
+
+//    public Set<UserGroupEntity> getUsersGroups() {
+//        return usersGroups;
+//    }
+
+//    @JsonIgnore
+//    @OneToMany(cascade = CascadeType.ALL,
+//            orphanRemoval = true,
+//            fetch = FetchType.LAZY)
+//    @JoinTable(name = "users_groups")
+//    @JoinColumn(name = "user_id")
+//    Set<UserGroupEntity> usersGroups;
+
+
+//    @JsonIgnore
+//    public void addGroupToUser(UserGroupEntity userGroupEntity){
+//        if(usersGroups==null) usersGroups=new HashSet<>();
+//        usersGroups.add(userGroupEntity);
+//    }
+
 
     public String getPhone() {
         return phone;
@@ -98,20 +125,6 @@ public class UserEntity implements Serializable {
 
     public UserEntity() {
 
-    }
-
-    @Override
-    public String toString() {
-        return "UserEntity{" +
-                "id='" + id + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", verified=" + verified +
-                ", status='" + status + '\'' +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
     }
 
     public void setId(String id) {
@@ -176,5 +189,23 @@ public class UserEntity implements Serializable {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "UserEntity{" +
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", verified=" + verified +
+                ", status='" + status + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", token='" + token + '\'' +
+                ", phone='" + phone + '\'' +
+                ", kindergarten='" + kindergarten + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }

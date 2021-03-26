@@ -18,7 +18,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     }
 
     public UserDetails getUserByID(String id){
-        var res=userRepository.findById(id);;
+        var res=userRepository.findById(id);
         return res.map(MyUserDetails::getDetails).orElse(null);
     }
 }

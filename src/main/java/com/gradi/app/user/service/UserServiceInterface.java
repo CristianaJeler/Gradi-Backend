@@ -2,9 +2,9 @@ package com.gradi.app.user.service;
 
 
 import com.gradi.app.authentication.jwt.LoggedInUserData;
-import com.gradi.app.user.DTOs.PasswordChangeDTO;
-import com.gradi.app.user.DTOs.UserEntityDTO;
-import org.hibernate.service.spi.ServiceException;
+import com.gradi.app.user.dtos.PasswordChangeDTO;
+import com.gradi.app.user.dtos.UserEntityDTO;
+import com.gradi.app.user.model.UserEntity;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
@@ -55,4 +55,11 @@ public interface UserServiceInterface {
      * @param token
      */
     void updateUserPassword(PasswordChangeDTO oldAndNewPswd, String token);
+
+    /**
+     *
+     * @param token
+     * @return
+     */
+    UserEntity getUserEntityByToken(String token);
 }

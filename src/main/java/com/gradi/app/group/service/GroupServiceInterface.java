@@ -6,7 +6,7 @@ import com.gradi.app.user.model.UserEntity;
 import java.util.Collection;
 
 public interface GroupServiceInterface {
-    GroupEntity addNewGroup(String name);
+    GroupEntity addNewGroup(GroupEntity group);
     void addUserGroup(UserEntity user, GroupEntity group);
     Collection<GroupEntity> getUsersGroups(String id);
 }

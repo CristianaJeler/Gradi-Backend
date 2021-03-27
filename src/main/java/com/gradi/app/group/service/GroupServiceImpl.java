@@ -40,7 +40,7 @@ public class GroupServiceImpl implements GroupServiceInterface{
     }
 
     @Override
-    public GroupEntity addNewGroup(String name) {
-        return groupRepository.save(new GroupEntity(name));
+    public GroupEntity addNewGroup(GroupEntity group) {
+        return groupRepository.save(group);
     }
 }

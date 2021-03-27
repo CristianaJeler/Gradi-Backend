@@ -13,4 +13,10 @@
             <column name="members_no" type="integer" defaultValue="1"/>
         </createTable>
     </changeSet>
+
+    <changeSet id="27mar2021-add_img" author="cris">
+        <addColumn tableName="groups">
+            <column name="img" type="varchar(250)"/>
+        </addColumn>
+    </changeSet>
 </databaseChangeLog>

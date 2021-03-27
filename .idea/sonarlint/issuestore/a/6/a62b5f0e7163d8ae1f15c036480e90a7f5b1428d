@@ -1,4 +1,4 @@
 
-U	java:S106X"9Replace this use of System.out or System.err by a logger.(¾ûÆ·8‰—ÀÏ„/
 x
 java:S14889"[Immediately return this expression instead of assigning it to the temporary variable "res".(ú£¥ï8ÁÓõĞ„/
+U	java:S106X"9Replace this use of System.out or System.err by a logger.(¾ûÆ·8‰—ÀÏ„/

@@ -43,8 +43,8 @@ com/gradi/app/apiResponse/ApiResponse.java
  com.gradi.app.apiResponse.ApiResponse
 com/gradi/app/authentication/jwt/MyUserDetails.java
  com.gradi.app.authentication.jwt.MyUserDetails
-com/gradi/app/group/model/GroupEntity.java
- com.gradi.app.group.model.GroupEntity
+com/gradi/app/group/model/UserGroupKey.java
+ com.gradi.app.group.model.UserGroupKey
 com/gradi/app/user/controller/UserController.java
  com.gradi.app.user.controller.UserController
 com/gradi/app/user/model/UserEntity.java
@@ -57,17 +57,17 @@ com/gradi/app/user/repository/UserRepository.java
  com.gradi.app.user.repository.UserRepository
 com/gradi/app/user/service/UserServiceImpl.java
  com.gradi.app.user.service.UserServiceImpl
-com/gradi/app/group/model/UserGroupEntity.java
- com.gradi.app.group.model.UserGroupEntity
-com/gradi/app/group/repository/GroupRepository.java
- com.gradi.app.group.repository.GroupRepository
-com/gradi/app/group/service/GroupServiceInterface.java
- com.gradi.app.group.service.GroupServiceInterface
-com/gradi/app/group/controller/GroupController.java
- com.gradi.app.group.controller.GroupController
-com/gradi/app/group/model/UserGroupKey.java
- com.gradi.app.group.model.UserGroupKey
 com/gradi/app/group/repository/UserGroupRepository.java
  com.gradi.app.group.repository.UserGroupRepository
+com/gradi/app/group/repository/GroupRepository.java
+ com.gradi.app.group.repository.GroupRepository
+com/gradi/app/group/model/GroupEntity.java
+ com.gradi.app.group.model.GroupEntity
+com/gradi/app/group/model/UserGroupEntity.java
+ com.gradi.app.group.model.UserGroupEntity
+com/gradi/app/group/service/GroupServiceInterface.java
+ com.gradi.app.group.service.GroupServiceInterface
 com/gradi/app/group/service/GroupServiceImpl.java
  com.gradi.app.group.service.GroupServiceImpl
+com/gradi/app/group/controller/GroupController.java
+ com.gradi.app.group.controller.GroupController

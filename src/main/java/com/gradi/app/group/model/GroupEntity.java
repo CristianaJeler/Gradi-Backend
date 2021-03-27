@@ -26,6 +26,17 @@ public class GroupEntity implements Serializable {
     @Column(name = "members_no")
     private Integer membersNo;
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    @Column(name = "img")
+    private String img;
+
     @JsonIgnore
     public GroupEntity(String name) {
         this.name = name;

@@ -1,6 +1,7 @@
 package com.gradi.app.group.controller;
 
 import com.gradi.app.authentication.jwt.JwtValues;
+import com.gradi.app.group.model.GroupEntity;
 import com.gradi.app.group.service.GroupServiceInterface;
 import com.gradi.app.user.service.UserServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,10 +34,11 @@ public class GroupController {
     }
 
     @PutMapping(value = "/add")
-    ResponseEntity<?> addNewGroup(@RequestBody String name, HttpServletRequest request) {
+    ResponseEntity<?> addNewGroup(@RequestBody GroupEntity newGroup, HttpServletRequest request) {
         String token = request.getHeader(jwtValues.getHEADER()).split(jwtValues.getTOKEN_TYPE())[1];
         var user = userService.getUserEntityByToken(token.trim());
-        var group=groupService.addNewGroup(name);
+        newGroup.setMembersNo(1);
+        var group=groupService.addNewGroup(newGroup);
         groupService.addUserGroup(user,group);
         return ResponseEntity.ok(group);
     }

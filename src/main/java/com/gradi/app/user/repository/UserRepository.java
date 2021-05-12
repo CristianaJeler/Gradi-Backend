@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
-import java.util.Optional;
+import java.util.Collection;
 
 
 @Repository
@@ -48,11 +48,21 @@ public interface UserRepository extends JpaRepository<UserEntity, String> {
         @Query("update UserEntity user set user.password=:newPswd where user.id=:id and user.password=:oldPswd")
         void updatePassword(String oldPswd, String newPswd, String id);
 
-
         boolean existsByEmail(String email);
         boolean existsByUsername(String username);
 
         UserEntity findByUsername(String username);
 
         UserEntity findUserEntityByToken(String token);
+
+
+        @Transactional
+        @Query(value = "select * "+
+                " from users u where " +
+                "(u.first_name ilike CONCAT(:searchCriteria,'%') " +
+                "or u.last_name ilike CONCAT(:searchCriteria,'%') " +
+                "or u.username ilike CONCAT(:searchCriteria,'%')) " +
+                "order by u.first_name "+
+                "limit :size offset :page*:size", nativeQuery = true)
+        Collection<UserEntity> searchUsers(String searchCriteria, Integer page, Integer size);
 }

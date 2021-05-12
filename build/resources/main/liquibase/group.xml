@@ -19,4 +19,9 @@
             <column name="img" type="varchar(250)"/>
         </addColumn>
     </changeSet>
+    <changeSet id="02apr2021-drop_memberNo" author="cri">
+        <dropColumn tableName="groups">
+            <column name="members_no"/>
+        </dropColumn>
+    </changeSet>
 </databaseChangeLog>

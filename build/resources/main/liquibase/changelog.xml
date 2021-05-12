@@ -6,5 +6,17 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <include file="liquibase/user.xml"/>
     <include file="liquibase/group.xml"/>
+    <include file="liquibase/game.xml"/>
+    <include file="liquibase/activity.xml"/>
+    <include file="liquibase/media.xml"/>
+    <include file="liquibase/link.xml"/>
     <include file="liquibase/user_group.xml"/>
+    <include file="liquibase/user_activity.xml"/>
+    <include file="liquibase/activity_game.xml"/>
+    <include file="liquibase/activity_media.xml"/>
+    <include file="liquibase/activity_link.xml"/>
+    <include file="liquibase/answer.xml"/>
+    <include file="liquibase/result.xml"/>
+    <include file="liquibase/answer_media.xml"/>
+    <include file="liquibase/badges.xml"/>
 </databaseChangeLog>

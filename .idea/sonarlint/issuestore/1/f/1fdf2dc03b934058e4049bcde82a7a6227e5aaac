@@ -1,29 +1,9 @@
 
-E
-java:S3740="/Provide the parametrized type for this generic.(Š¸àÜ
-E
-java:S3740;"/Provide the parametrized type for this generic.(ğÙµœ
-^
-java:S44886"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(íì†ô
-N	java:S106""9Replace this use of System.out or System.err by a logger.(ÿƒ®ë
-A
-java:S14527"&Remove usage of generic wildcard type.(Öúì©úÿÿÿÿ
-^
-java:S4488"HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(Ğ×
-0
-java:S3751/"Make this method "public".(ÕŒÒ‰
-N	java:S1060"9Replace this use of System.out or System.err by a logger.(Ø¼¢ƒ
-<
-java:S1452("&Remove usage of generic wildcard type.(ÀÕØ½
-5
-java:S3751"Make this method "public".(Ó©áäşÿÿÿÿ
-A
-java:S1452"&Remove usage of generic wildcard type.(Ó©áäşÿÿÿÿ
-c
-java:S4488."HReplace "@RequestMapping(method = RequestMethod.PUT)" with "@PutMapping"(õÀ©æúÿÿÿÿ
-0
-java:S3751("Make this method "public".(ÀÕØ½
-<
-java:S1452/"&Remove usage of generic wildcard type.(ÕŒÒ‰
-5
-java:S37517"Make this method "public".(Öúì©úÿÿÿÿ
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(ÿƒ®ë8î³¬Âˆ/
+Z	java:S106H"9Replace this use of System.out or System.err by a logger.(šî¹úÿÿÿÿ8Ûûùêˆ/
+C
+java:S1452M"&Remove usage of generic wildcard type.(¸„ÿ“8ÒÖÔ†/
+H
+java:S1452S"&Remove usage of generic wildcard type.(øÂ–˜øÿÿÿÿ8ñ¾İ†/
+H
+java:S1452Y"&Remove usage of generic wildcard type.(í¨œ“ıÿÿÿÿ8Ï¯Í¦/

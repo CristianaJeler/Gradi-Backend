@@ -1,20 +1,12 @@
 package com.gradi.app.user.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.gradi.app.group.model.GroupEntity;
-import com.gradi.app.group.model.UserGroupEntity;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "users")
@@ -51,27 +43,6 @@ public class UserEntity implements Serializable {
     @Type(type = "org.hibernate.type.BinaryType")
     @Column(name = "picture")
     private byte[] picture;
-
-
-//    public Set<UserGroupEntity> getUsersGroups() {
-//        return usersGroups;
-//    }
-
-//    @JsonIgnore
-//    @OneToMany(cascade = CascadeType.ALL,
-//            orphanRemoval = true,
-//            fetch = FetchType.LAZY)
-//    @JoinTable(name = "users_groups")
-//    @JoinColumn(name = "user_id")
-//    Set<UserGroupEntity> usersGroups;
-
-
-//    @JsonIgnore
-//    public void addGroupToUser(UserGroupEntity userGroupEntity){
-//        if(usersGroups==null) usersGroups=new HashSet<>();
-//        usersGroups.add(userGroupEntity);
-//    }
-
 
     public String getPhone() {
         return phone;

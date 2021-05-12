@@ -3,11 +3,13 @@ package com.gradi.app.user.service;
 
 import com.gradi.app.authentication.jwt.LoggedInUserData;
 import com.gradi.app.user.dtos.PasswordChangeDTO;
+import com.gradi.app.user.dtos.SearchedUserDTO;
 import com.gradi.app.user.dtos.UserEntityDTO;
 import com.gradi.app.user.model.UserEntity;
 
 import java.io.UnsupportedEncodingException;
 import java.sql.SQLException;
+import java.util.Collection;
 
 public interface UserServiceInterface {
     /**
@@ -38,7 +40,7 @@ public interface UserServiceInterface {
      * @param token
      * @return
      */
-    UserEntityDTO getUserByToken(String token);
+    UserEntityDTO getUserDTOByToken(String token);
 
     /**
      *
@@ -62,4 +64,21 @@ public interface UserServiceInterface {
      * @return
      */
     UserEntity getUserEntityByToken(String token);
+
+
+    /**
+     *
+     * @param searchCriteria
+     * @param groupID
+     * @param page
+     * @param size
+     * @return
+     */
+    Collection<SearchedUserDTO> searchUsers(String searchCriteria, String groupID, Integer page, Integer size);
+
+    void addMemberToGroup(String groupID, String memberID);
+
+    void deleteMemberFromGroup(String groupID, String memberID);
+
+    Collection<SearchedUserDTO> fetchUsersFromGroup(String groupID);
 }

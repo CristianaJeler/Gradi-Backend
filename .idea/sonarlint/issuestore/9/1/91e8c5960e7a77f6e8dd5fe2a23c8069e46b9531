@@ -1,19 +1,17 @@
 
-e
-java:S4488$"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ÌıŸ®şÿÿÿÿ
-0
-java:S3751/"Make this method "public".(Àú¸Š
-e
-java:S4488."JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ãèïûÿÿÿÿ
-5
-java:S3751%"Make this method "public".(‰¿·ûÿÿÿÿ
 E
 java:S3740("/Provide the parametrized type for this generic.(ğÙµœ
 E
 java:S3740*"/Provide the parametrized type for this generic.(Š¸àÜ
-A
-java:S1452%"&Remove usage of generic wildcard type.(‰¿·ûÿÿÿÿ
 E
 java:S3740@"/Provide the parametrized type for this generic.(Š¸àÜ
+5
+java:S3751%"Make this method "public".(‰¿·ûÿÿÿÿ
+A
+java:S1452%"&Remove usage of generic wildcard type.(‰¿·ûÿÿÿÿ
+0
+java:S3751/"Make this method "public".(Àú¸Š
 <
 java:S1452/"&Remove usage of generic wildcard type.(Àú¸Š
+L
+java:S62121"/Declare this local variable with "var" instead.(»ãÿ»8ªÊüÄ‘/

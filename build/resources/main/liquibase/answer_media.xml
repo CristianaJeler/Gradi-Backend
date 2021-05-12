@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="06mai2021-create_answers_media" author="cris">
+        <createTable tableName="answers_media">
+            <column name="answer_id" type="varchar(250)">
+                <constraints foreignKeyName="answer_id_fk" references="answers(answer_id)"
+                             nullable="false" primaryKey="true" primaryKeyName="answer_media_PK"/>
+            </column>
+            <column name="media_id" type="varchar(250)">
+                <constraints foreignKeyName="media_id_fk" references="media(media_id)"
+                             nullable="false" primaryKey="true" primaryKeyName="answer_media_PK"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

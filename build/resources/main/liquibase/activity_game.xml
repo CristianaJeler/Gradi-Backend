@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="16apr2021-create_activities_games" author="cris">
+        <createTable tableName="activities_games">
+            <column name="activity_id" type="varchar(250)">
+                <constraints foreignKeyName="activity_id_fk" references="activities(activity_id)"
+                             nullable="false" primaryKey="true" primaryKeyName="activities_games_PK"/>
+            </column>
+            <column name="game_id" type="varchar(250)">
+                <constraints foreignKeyName="game_id_fk" references="games(game_id)"
+                             nullable="false" primaryKey="true" primaryKeyName="activities_games_PK"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

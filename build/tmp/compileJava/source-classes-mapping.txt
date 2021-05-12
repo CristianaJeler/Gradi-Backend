@@ -1,73 +1,177 @@
-com/gradi/app/user/dtos/PasswordChangeDTO.java
- com.gradi.app.user.dtos.PasswordChangeDTO
+com/gradi/app/authentication/jwt/MyUserDetails.java
+ com.gradi.app.authentication.jwt.MyUserDetails
+com/gradi/app/group/model/GroupEntity.java
+ com.gradi.app.group.model.GroupEntity
+com/gradi/app/authentication/errors/ExistingCredentialsError.java
+ com.gradi.app.authentication.errors.ExistingCredentialsError
+com/gradi/app/activities/repository/ActivityMediaRepository.java
+ com.gradi.app.activities.repository.ActivityMediaRepository
+com/gradi/app/group/service/GroupServiceInterface.java
+ com.gradi.app.group.service.GroupServiceInterface
+com/gradi/app/authentication/controller/AuthenticationController.java
+ com.gradi.app.authentication.controller.AuthenticationController
+com/gradi/app/authentication/service/AuthServiceInterface.java
+ com.gradi.app.authentication.service.AuthServiceInterface
+com/gradi/app/activities/mappers/MediaMapperImpl.java
+ com.gradi.app.activities.mappers.MediaMapperImpl
+com/gradi/app/activities/model/mediaRelated/ActivityMediaEntity.java
+ com.gradi.app.activities.model.mediaRelated.ActivityMediaEntity
+com/gradi/app/activities/model/answerRelated/AnswerBody.java
+ com.gradi.app.activities.model.answerRelated.AnswerBody
+com/gradi/app/game/model/ActivityGameKey.java
+ com.gradi.app.game.model.ActivityGameKey
+com/gradi/app/user/service/UserServiceInterface.java
+ com.gradi.app.user.service.UserServiceInterface
+com/gradi/app/activities/repository/ActivityGameRepository.java
+ com.gradi.app.activities.repository.ActivityGameRepository
+com/gradi/app/MainGradiApp.java
+ com.gradi.app.MainGradiApp
+com/gradi/app/user/model/UserEntity.java
+ com.gradi.app.user.model.UserEntity
+com/gradi/app/game/service/GameServiceInterface.java
+ com.gradi.app.game.service.GameServiceInterface
+com/gradi/app/user/dtos/UserSignupDTO.java
+ com.gradi.app.user.dtos.UserSignupDTO
+com/gradi/app/authentication/jwt/TokenProvider.java
+ com.gradi.app.authentication.jwt.TokenProvider
+com/gradi/app/group/service/GroupServiceImpl.java
+ com.gradi.app.group.service.GroupServiceImpl
+com/gradi/app/activities/model/linkRelated/ActivityLinkKey.java
+ com.gradi.app.activities.model.linkRelated.ActivityLinkKey
+com/gradi/app/apiResponse/ApiResponse.java
+ com.gradi.app.apiResponse.ApiResponse
+com/gradi/app/group/controller/GroupController.java
+ com.gradi.app.group.controller.GroupController
 com/gradi/app/authentication/service/AuthServiceImpl.java
  com.gradi.app.authentication.service.AuthServiceImpl
  com.gradi.app.authentication.service.AuthServiceImpl$1
-com/gradi/app/utilities/mappers/UserMapperImpl.java
- com.gradi.app.utilities.mappers.UserMapperImpl
-com/gradi/app/authentication/errors/AuthValidator.java
- com.gradi.app.authentication.errors.AuthValidator
-com/gradi/app/user/dtos/UserEntityDTO.java
- com.gradi.app.user.dtos.UserEntityDTO
-com/gradi/app/authentication/errors/LoginError.java
- com.gradi.app.authentication.errors.LoginError
-com/gradi/app/authentication/service/AuthServiceInterface.java
- com.gradi.app.authentication.service.AuthServiceInterface
-com/gradi/app/user/service/UserServiceInterface.java
- com.gradi.app.user.service.UserServiceInterface
+com/gradi/app/activities/repository/ActivityLinkRepository.java
+ com.gradi.app.activities.repository.ActivityLinkRepository
+com/gradi/app/user/mappers/UserMapperImpl.java
+ com.gradi.app.user.mappers.UserMapperImpl
 com/gradi/app/user/dtos/UserLoginDTO.java
  com.gradi.app.user.dtos.UserLoginDTO
+com/gradi/app/authentication/errors/LoginError.java
+ com.gradi.app.authentication.errors.LoginError
+com/gradi/app/game/model/ActivityGameEntity.java
+ com.gradi.app.game.model.ActivityGameEntity
+com/gradi/app/activities/model/userRelated/ActivityUserKey.java
+ com.gradi.app.activities.model.userRelated.ActivityUserKey
+com/gradi/app/user/dtos/UserEntityDTO.java
+ com.gradi.app.user.dtos.UserEntityDTO
+com/gradi/app/group/mappers/GroupMapperImpl.java
+ com.gradi.app.group.mappers.GroupMapperImpl
+com/gradi/app/group/repository/UserGroupRepository.java
+ com.gradi.app.group.repository.UserGroupRepository
+com/gradi/app/user/controller/UserController.java
+ com.gradi.app.user.controller.UserController
+com/gradi/app/user/mappers/UsersMapperInterface.java
+ com.gradi.app.user.mappers.UsersMapperInterface
+com/gradi/app/activities/model/linkRelated/ActivityLinkEntity.java
+ com.gradi.app.activities.model.linkRelated.ActivityLinkEntity
+com/gradi/app/group/model/UserGroupKey.java
+ com.gradi.app.group.model.UserGroupKey
+com/gradi/app/activities/repository/MediaRepository.java
+ com.gradi.app.activities.repository.MediaRepository
+com/gradi/app/user/repository/UserRepository.java
+ com.gradi.app.user.repository.UserRepository
 com/gradi/app/user/dtos/ProfilePictureDTO.java
  com.gradi.app.user.dtos.ProfilePictureDTO
-com/gradi/app/authentication/jwt/LoggedInUserData.java
- com.gradi.app.authentication.jwt.LoggedInUserData
-com/gradi/app/authentication/jwt/UserDetailServiceImpl.java
- com.gradi.app.authentication.jwt.UserDetailServiceImpl
-com/gradi/app/MainGradiApp.java
- com.gradi.app.MainGradiApp
-com/gradi/app/authentication/errors/ExistingCredentialsError.java
- com.gradi.app.authentication.errors.ExistingCredentialsError
-com/gradi/app/user/dtos/UserSignupDTO.java
- com.gradi.app.user.dtos.UserSignupDTO
+com/gradi/app/activities/model/answerRelated/AnswerMediaEntity.java
+ com.gradi.app.activities.model.answerRelated.AnswerMediaEntity
+com/gradi/app/activities/mappers/MediaMapperInterface.java
+ com.gradi.app.activities.mappers.MediaMapperInterface
+com/gradi/app/game/service/GameServiceImpl.java
+ com.gradi.app.game.service.GameServiceImpl
 com/gradi/app/authentication/jwt/WebSecurityConfig.java
  com.gradi.app.authentication.jwt.WebSecurityConfig
 com/gradi/app/authentication/jwt/JwtValues.java
  com.gradi.app.authentication.jwt.JwtValues
-com/gradi/app/authentication/jwt/TokenProvider.java
- com.gradi.app.authentication.jwt.TokenProvider
-com/gradi/app/authentication/errors/InvalidCredentialsError.java
- com.gradi.app.authentication.errors.InvalidCredentialsError
+com/gradi/app/activities/mappers/ResultMapperInterface.java
+ com.gradi.app.activities.mappers.ResultMapperInterface
 com/gradi/app/authentication/jwt/JwtAuthFilter.java
  com.gradi.app.authentication.jwt.JwtAuthFilter
-com/gradi/app/apiResponse/ApiResponse.java
- com.gradi.app.apiResponse.ApiResponse
-com/gradi/app/authentication/jwt/MyUserDetails.java
- com.gradi.app.authentication.jwt.MyUserDetails
-com/gradi/app/group/model/UserGroupKey.java
- com.gradi.app.group.model.UserGroupKey
-com/gradi/app/user/controller/UserController.java
- com.gradi.app.user.controller.UserController
-com/gradi/app/user/model/UserEntity.java
- com.gradi.app.user.model.UserEntity
-com/gradi/app/utilities/mappers/UsersMapperInterface.java
- com.gradi.app.utilities.mappers.UsersMapperInterface
-com/gradi/app/authentication/controller/AuthenticationController.java
- com.gradi.app.authentication.controller.AuthenticationController
-com/gradi/app/user/repository/UserRepository.java
- com.gradi.app.user.repository.UserRepository
-com/gradi/app/user/service/UserServiceImpl.java
- com.gradi.app.user.service.UserServiceImpl
-com/gradi/app/group/repository/UserGroupRepository.java
- com.gradi.app.group.repository.UserGroupRepository
+com/gradi/app/activities/model/mediaRelated/ActivityMediaKey.java
+ com.gradi.app.activities.model.mediaRelated.ActivityMediaKey
+com/gradi/app/authentication/errors/InvalidCredentialsError.java
+ com.gradi.app.authentication.errors.InvalidCredentialsError
+com/gradi/app/game/controller/GameController.java
+ com.gradi.app.game.controller.GameController
 com/gradi/app/group/repository/GroupRepository.java
  com.gradi.app.group.repository.GroupRepository
-com/gradi/app/group/model/GroupEntity.java
- com.gradi.app.group.model.GroupEntity
+com/gradi/app/activities/model/userRelated/ActivityUserEntity.java
+ com.gradi.app.activities.model.userRelated.ActivityUserEntity
+com/gradi/app/user/service/UserServiceImpl.java
+ com.gradi.app.user.service.UserServiceImpl
+com/gradi/app/authentication/errors/AuthValidator.java
+ com.gradi.app.authentication.errors.AuthValidator
+com/gradi/app/authentication/jwt/LoggedInUserData.java
+ com.gradi.app.authentication.jwt.LoggedInUserData
+com/gradi/app/user/dtos/SearchedUserDTO.java
+ com.gradi.app.user.dtos.SearchedUserDTO
+com/gradi/app/activities/model/linkRelated/LinkEntity.java
+ com.gradi.app.activities.model.linkRelated.LinkEntity
+com/gradi/app/game/model/GameEntity.java
+ com.gradi.app.game.model.GameEntity
+com/gradi/app/user/dtos/PasswordChangeDTO.java
+ com.gradi.app.user.dtos.PasswordChangeDTO
+com/gradi/app/authentication/jwt/UserDetailServiceImpl.java
+ com.gradi.app.authentication.jwt.UserDetailServiceImpl
+com/gradi/app/utilities/WebSocketConfig.java
+ com.gradi.app.utilities.WebSocketConfig
+com/gradi/app/group/dtos/GroupDTO.java
+ com.gradi.app.group.dtos.GroupDTO
+com/gradi/app/activities/model/answerRelated/ResultEntity.java
+ com.gradi.app.activities.model.answerRelated.ResultEntity
 com/gradi/app/group/model/UserGroupEntity.java
  com.gradi.app.group.model.UserGroupEntity
-com/gradi/app/group/service/GroupServiceInterface.java
- com.gradi.app.group.service.GroupServiceInterface
-com/gradi/app/group/service/GroupServiceImpl.java
- com.gradi.app.group.service.GroupServiceImpl
-com/gradi/app/group/controller/GroupController.java
- com.gradi.app.group.controller.GroupController
+com/gradi/app/activities/repository/ActivityUserRepository.java
+ com.gradi.app.activities.repository.ActivityUserRepository
+com/gradi/app/game/repository/GameRepository.java
+ com.gradi.app.game.repository.GameRepository
+com/gradi/app/group/mappers/GroupMapperInterface.java
+ com.gradi.app.group.mappers.GroupMapperInterface
+com/gradi/app/activities/repository/LinkRepository.java
+ com.gradi.app.activities.repository.LinkRepository
+com/gradi/app/activities/model/mediaRelated/MediaDTO.java
+ com.gradi.app.activities.model.mediaRelated.MediaDTO
+com/gradi/app/activities/model/mediaRelated/MediaContentEntity.java
+ com.gradi.app.activities.model.mediaRelated.MediaContentEntity
+com/gradi/app/activities/model/answerRelated/AnswerEntity.java
+ com.gradi.app.activities.model.answerRelated.AnswerEntity
+com/gradi/app/activities/model/answerRelated/ResultBody.java
+ com.gradi.app.activities.model.answerRelated.ResultBody
+com/gradi/app/activities/model/ActivityEntity.java
+ com.gradi.app.activities.model.ActivityEntity
+com/gradi/app/activities/repository/AnswerRepository.java
+ com.gradi.app.activities.repository.AnswerRepository
+com/gradi/app/activities/mappers/ResultMapperImpl.java
+ com.gradi.app.activities.mappers.ResultMapperImpl
+com/gradi/app/activities/model/answerRelated/AnswerMediaKey.java
+ com.gradi.app.activities.model.answerRelated.AnswerMediaKey
+com/gradi/app/activities/repository/ResultRepository.java
+ com.gradi.app.activities.repository.ResultRepository
+com/gradi/app/activities/repository/AnswerMediaRepository.java
+ com.gradi.app.activities.repository.AnswerMediaRepository
+com/gradi/app/activities/service/ActivityServiceImpl.java
+ com.gradi.app.activities.service.ActivityServiceImpl
+com/gradi/app/activities/model/ActivityBody.java
+ com.gradi.app.activities.model.ActivityBody
+com/gradi/app/activities/repository/ActivityRepository.java
+ com.gradi.app.activities.repository.ActivityRepository
+com/gradi/app/activities/model/ActivityDetailsEntity.java
+ com.gradi.app.activities.model.ActivityDetailsEntity
+com/gradi/app/activities/controller/ActivityController.java
+ com.gradi.app.activities.controller.ActivityController
+com/gradi/app/activities/service/ActivityServiceInterface.java
+ com.gradi.app.activities.service.ActivityServiceInterface
+com/gradi/app/badges/repository/BadgesRepository.java
+ com.gradi.app.badges.repository.BadgesRepository
+com/gradi/app/badges/model/BadgeEntity.java
+ com.gradi.app.badges.model.BadgeEntity
+com/gradi/app/badges/service/BadgesServiceImpl.java
+ com.gradi.app.badges.service.BadgesServiceImpl
+com/gradi/app/badges/service/BadgesServiceInterface.java
+ com.gradi.app.badges.service.BadgesServiceInterface
+com/gradi/app/badges/controller/BadgesController.java
+ com.gradi.app.badges.controller.BadgesController

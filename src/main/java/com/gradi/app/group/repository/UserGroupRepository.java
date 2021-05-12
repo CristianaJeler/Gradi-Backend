@@ -14,6 +14,10 @@ import java.util.List;
 public interface UserGroupRepository extends JpaRepository<UserGroupEntity, UserGroupKey> {
 
     @Transactional
-    @Query(value="select * from users_groups ug where ug.user_id=:userID", nativeQuery = true)
-    List<UserGroupEntity> getUsersGroups(String userID);
+    @Query(value = "select * from users_groups ug where ug.user_id=:userID", nativeQuery = true)
+    List<UserGroupEntity> getUserGroupsByUserID(String userID);
+
+    @Transactional
+    @Query(value = "select * from users_groups ug where ug.group_id=:groupID", nativeQuery = true)
+    List<UserGroupEntity> getUserGroupsByGroupID(String groupID);
 }

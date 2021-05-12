@@ -33,7 +33,7 @@ public class AuthenticationController {
     @Autowired
     UserServiceInterface userService;
 
-    @RequestMapping(value = "/signup", method = RequestMethod.POST)
+    @PostMapping(value = "/signup")
     ResponseEntity<?> signup(@RequestBody UserSignupDTO user) {
         try{
             authService.signup(user);
@@ -43,7 +43,7 @@ public class AuthenticationController {
         }
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @PostMapping(value = "/login")
     ResponseEntity<?> login(@RequestBody UserLoginDTO user) {
         try{
             Authentication authentication = authenticationManager.authenticate(

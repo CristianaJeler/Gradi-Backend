@@ -1,12 +1,0 @@
-
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8°©ÜË†/
-X	java:S125B"<This block of commented-out lines of code should be removed.(ô»—·8°©ÜË†/
-]	java:S125F"<This block of commented-out lines of code should be removed.(¥â™‘ûÿÿÿÿ8°©ÜË†/
-d
-java:S1128"BRemove this unused import 'com.gradi.app.group.model.GroupEntity'.(è˜ıÿÿÿÿ8°©ÜË†/
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8°©ÜË†/
-Z
-java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8°©ÜË†/
-X	java:S1258"<This block of commented-out lines of code should be removed.(¡•‘8çÈÜË†/

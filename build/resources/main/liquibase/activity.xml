@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="16apr2021-create_activities" author="cris">
+        <createTable tableName="activities">
+            <column name="activity_id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="description" type="varchar">
+            </column>
+            <column name="due_date" type="varchar(30)">
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="29apr2021-add_title_and_field" author="cri">
+        <addColumn tableName="activities">
+            <column name="title" type="varchar(30)">
+            </column>
+            <column name="field" type="varchar(30)">
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet id="07mai2021-add_groupId" author="cri">
+        <addColumn tableName="activities">
+            <column name="group_id" type="varchar(250)">
+                <constraints foreignKeyName="group_id_fk" references="groups(group_id)"
+                             nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

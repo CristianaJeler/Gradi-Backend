@@ -6,7 +6,7 @@ import com.gradi.app.authentication.errors.AuthValidator;
 import com.gradi.app.user.dtos.UserEntityDTO;
 import com.gradi.app.user.dtos.UserSignupDTO;
 import com.gradi.app.user.repository.UserRepository;
-import com.gradi.app.utilities.mappers.UsersMapperInterface;
+import com.gradi.app.user.mappers.UsersMapperInterface;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

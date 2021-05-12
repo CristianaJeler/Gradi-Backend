@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="06mai2021-create_answers" author="cris">
+        <createTable tableName="answers">
+            <column name="answer_id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user_id" type="varchar(250)">
+                <constraints foreignKeyName="user_id_fk" references="users(user_id)" nullable="false"/>
+            </column>
+            <column name="activity_id" type="varchar(250)">
+                <constraints foreignKeyName="activity_id_fk" references="activities(activity_id)" nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="07mai2021-add_date" author="cris">
+        <addColumn tableName="answers">
+            <column name="added_at" defaultValue="now()" type="timestamp"/>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="07mai2021-add_checked" author="cris">
+        <addColumn tableName="answers">
+            <column name="checked" defaultValue="0" type="integer"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

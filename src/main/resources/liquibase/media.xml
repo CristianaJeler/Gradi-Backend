@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="16apr2021-create_media" author="cris">
+        <createTable tableName="media">
+            <column name="media_id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="content" type="bytea">
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet id="05mai2021-add_content_type" author="cris">
+        <addColumn tableName="media">
+            <column name="content_type" type="varchar">
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

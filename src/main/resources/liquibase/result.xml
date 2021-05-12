@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="06mai2021-create_game_results" author="cris">
+        <createTable tableName="results">
+            <column name="result_id" type="varchar(250)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="answer_id" type="varchar(250)">
+                <constraints foreignKeyName="answer_id_fk" references="answers(answer_id)" nullable="false"/>
+            </column>
+            <column name="result" type="integer">
+            </column>
+            <column name="game_name" type="varchar(50)">
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

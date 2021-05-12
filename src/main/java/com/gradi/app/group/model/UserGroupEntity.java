@@ -11,19 +11,7 @@ public class UserGroupEntity implements Serializable {
     @EmbeddedId
     UserGroupKey id;
 
-//    @ManyToOne
-//    @MapsId("userId")
-//    @JoinColumn(name = "user_id")
-//    UserEntity user;
-
-//    @ManyToOne
-//    @MapsId("groupId")
-//    @JoinColumn(name="group_id")
-//    GroupEntity group;
-
     public UserGroupEntity(UserEntity user, GroupEntity group) {
-//        this.user = user;
-//        this.group = group;
         this.id=new UserGroupKey(user.getId(), group.getId());
     }
 
@@ -31,25 +19,15 @@ public class UserGroupEntity implements Serializable {
 
     }
 
-//    public UserEntity getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(UserEntity user) {
-//        this.user = user;
-//    }
-//
-//    public GroupEntity getGroup() {
-//        return group;
-//    }
+    public UserGroupEntity(UserGroupKey id) {
+        this.id = id;
+    }
+
 
     @Override
     public String toString() {
         return "UserGroupEntity{" +
                 "id=" + id ;
-//                ", user=" + user +
-//                ", group=" + group +
-//                '}';
     }
 
     public UserGroupKey getId() {
